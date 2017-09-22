@@ -1,0 +1,91 @@
+#这是配置文件
+#程序将会忽略空行和开头带 # 的行数
+#配置采用 name:value的形式 程序会忽略掉所有的空格符(空格，制表符等)
+#原则上不建议改动配置中的 name 部分
+
+#姓
+shipping-user-lastName:
+
+#名
+shipping-user-firstName:
+
+#区号，如电话填手机则此处填 0
+shipping-user-daytimePhoneAreaCode:
+
+#电话号码，若此处填手机，则区号填 0
+shipping-user-daytimePhone:
+
+#省/直辖市
+shipping-user-state:
+
+#市
+shipping-user-city:
+
+#区/镇,地区信息请访问apple官网至购物袋详情页获取精确值，否则将不能生效
+shipping-user-district:
+
+#街道
+shipping-user-street:
+
+#详细住址，如门牌号等
+shipping-user-street2:
+
+#邮编
+shipping-user-postalCode:
+
+#收信邮箱
+shipping-user-emailAddress:
+
+#收信手机(可不填)
+shipping-user-mobilePhone:
+
+#appleid:
+appleid:
+
+#password:
+password:
+
+
+#---------------------------------------分割线-----------------------------------------------
+#下面是上述配置的原本名，请不要删除，若不小心改动上方的 name 部分导致错误，请从下方的备份恢复
+#姓
+#shipping-user-lastName:
+
+#名
+#shipping-user-firstName:
+
+#区号，如电话填手机则此处填 0
+#shipping-user-daytimePhoneAreaCode:
+
+#电话号码，若此处填手机，则区号填 0
+#shipping-user-daytimePhone:
+
+#省/直辖市
+#shipping-user-state:
+
+#市
+#shipping-user-city:
+
+#区/镇,地区信息请访问apple官网至购物袋详情页获取精确值，否则将不能生效
+#shipping-user-district:
+
+#街道
+#shipping-user-street:
+
+#详细住址，如门牌号等
+#shipping-user-street2:
+
+#邮编
+#shipping-user-postalCode:
+
+#收信邮箱
+#shipping-user-emailAddress:
+
+#收信手机(可不填)
+#shipping-user-mobilePhone:
+
+#appleid:
+#appleid:
+
+#password:
+#password:
