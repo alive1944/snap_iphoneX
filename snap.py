@@ -128,6 +128,7 @@ def last_step(b, _url):
 
 
 def place_order(b, _url):
+    pass
     # place order
     try_action(b.find_by_id, 'place-order-button')
 

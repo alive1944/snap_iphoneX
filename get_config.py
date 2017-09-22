@@ -61,8 +61,6 @@ if __name__ == '__main__':
     try:
         test1 = get_apple_account()
         test2 = get_form_config()
-        print(test1)
-        print(test2)
         exit('your config is alright')
     except  Exception as e:
         print(e)
