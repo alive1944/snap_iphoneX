@@ -1,7 +1,11 @@
 #这是配置文件
 #程序将会忽略空行和开头带 # 的行数
 #配置采用 name:value的形式 程序会忽略掉所有的空格符(空格，制表符等)
-#原则上不建议改动配置中的 name 部分
+#规则上不能改动或删除配置中的 name 部分，不能改变配置的位置顺序，否则程序将会报错
+
+
+#网址，必须是选好机型，参数，颜色，内存大小等指标的网址
+url:https://www.apple.com/cn/shop/buy-iphone/iphone-x/5.8-%E8%8B%B1%E5%AF%B8%E6%98%BE%E7%A4%BA%E5%B1%8F-256gb-%E6%B7%B1%E7%A9%BA%E7%81%B0%E8%89%B2#00,11,21
 
 #姓
 shipping-user-lastName:
@@ -48,6 +52,10 @@ password:
 
 #---------------------------------------分割线-----------------------------------------------
 #下面是上述配置的原本名，请不要删除，若不小心改动上方的 name 部分导致错误，请从下方的备份恢复
+
+# iPhoneX网址 已选择好所有机身参数
+# url = https://www.apple.com/cn/shop/buy-iphone/iphone-x/5.8-%E8%8B%B1%E5%AF%B8%E6%98%BE%E7%A4%BA%E5%B1%8F-256gb-%E6%B7%B1%E7%A9%BA%E7%81%B0%E8%89%B2#00,11,21
+
 #姓
 #shipping-user-lastName:
 

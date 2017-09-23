@@ -5,15 +5,18 @@ import time
 reurl = ''
 func_name = ''
 
+show_error = False
+
 
 def start():
-    # iPhone网址 已选择好所有机身参数
+    # iPhoneX网址 已选择好所有机身参数
     # url = "https://www.apple.com/cn/shop/buy-iphone/iphone-x/5.8-%E8%8B%B1%E5%AF%B8%E6%98%BE%E7%A4%BA" \
     #       "%E5%B1%8F-256gb-%E6%B7%B1%E7%A9%BA%E7%81%B0%E8%89%B2#00,11,21"
 
-    # 测试网址 iPhone7Plus 128G
-    url = "https://www.apple.com/cn/shop/buy-iphone/iphone-7/5.5-%E8%8B%B1%E5%AF%B8%E5%B1%8F%E5%B9%95-" \
-          "128gb-%E9%93%B6%E8%89%B2#01,12,21"
+    # 测试网址 iPhone7Plus 256G
+    # url = "https://www.apple.com/cn/shop/buy-iphone/iphone-7/5.5-%E8%8B%B1%E5%AF%B8%E5%B1%8F%E5%B9%95-128" \
+    #       "gb-%E9%87%91%E8%89%B2#01,13,21"
+    url = get_config.get_url()
     b = Browser('chrome')
 
     def browser():
@@ -24,11 +27,11 @@ def start():
         except Exception as e:
             b.visit(globals()['reurl'])
             globals()['func_name'](b)
-            print('too much error,retry')
+            try_print('too much error,retry')
             if count == 5:
-                print('a fatal error accurred')
+                print('a fatal error occurred,reopen the browser')
                 b.quit()
-                print(e)
+                try_print(e)
                 browser()
                 count = 0
             count += 1
@@ -146,7 +149,7 @@ def try_(func, name, value=''):
             if count == 3:
                 raise Exception('too much fill tried')
 
-            print(e)
+            try_print(e)
             count += 1
         time.sleep(0.5)
 
@@ -169,12 +172,12 @@ def try_action(func, name, action='click'):
             if count == 3:
                 raise Exception('too much action tried')
 
-            print(e)
+            try_print(e)
             count += 1
             time.sleep(0.5)
 
 
-def set_url(b, _url, flag = ''):
+def set_url(b, _url, flag=''):
     while b.url == _url:
         if flag != '':
             print(1)
@@ -185,6 +188,15 @@ def set_url(b, _url, flag = ''):
     globals()['func_name'] = login
 
 
+def try_print(str):
+    if globals()['show_error'] is True:
+        print(str)
+
+
 if __name__ == '__main__':
+    if get_config.test_config() is not True:
+        print(get_config.test_config())
+        exit('programme has been exited')
+
     start()
     time.sleep(10000)
